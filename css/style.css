@@ -22,6 +22,10 @@ body {
     max-width: 1100px;
     margin: 0 auto;
 }
+.hidden {
+    opacity: 0;
+    cursor: unset!important;
+}
 .bg-amarillo {
     background-color: var(--secundario);
 }
@@ -29,10 +33,20 @@ body {
     background-color: #ffffff;
 }
 .barra {
-    display: grid;
-    grid-template-columns: 100px 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
+.barra a {
+    padding: .5rem 1.5rem;
+    margin: 1.25rem .5rem;
+}
+@media (min-width: 1110px) {
+    .barra a {
+        margin: 1.25rem 0;
+    }
+}
+
 /** Botones **/
 .btn {
     font-size: 2rem;
@@ -151,7 +165,7 @@ legend span {
 /** Listado de Contactos **/
 .contactos {
     padding: 2rem;
-    margin-top: 3rem;
+    margin: 3rem auto;
 }
 .contenedor-contactos {
     max-width: 800px;
@@ -176,7 +190,13 @@ legend span {
     margin: 2rem 0;
 }
 .contenedor-tabla {
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+@media (min-width: 400px) {
+    .contenedor-tabla {
+        overflow-x: unset;
+    }
 }
 .listado-contactos{
     width: 100%;

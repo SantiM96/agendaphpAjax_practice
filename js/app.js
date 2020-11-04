@@ -14,7 +14,7 @@ function eventListeners() {
     }
 
     // buscador
-    inputBuscador.addEventListener('input', buscarContactos);
+        inputBuscador.addEventListener('input', buscarContactos);
     
     numeroContactos();
 }

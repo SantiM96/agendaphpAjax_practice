@@ -74,7 +74,7 @@ if($_POST['accion'] == 'editar') {
     $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
 
     try{
-        $stmt = $conn->prepare("UPDATE contactos SET nombre = ?, telefono = ?, empresa = ? WHERE id = ?");
+        $stmt = $conn->prepare("UPDATE contacts SET name = ?, phone = ?, company = ? WHERE id = ?");
         $stmt->bind_param("sssi", $nombre,  $telefono,  $empresa, $id);
         $stmt->execute();
         if($stmt->affected_rows == 1){

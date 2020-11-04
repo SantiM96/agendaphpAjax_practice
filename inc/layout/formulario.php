@@ -5,7 +5,7 @@
             type="text" 
             placeholder="Nombre Contacto" 
             id="nombre"
-            value="<?php echo ($contacto['nombre']) ? $contacto['nombre'] : '';  ?>"
+            value="<?php echo ($contacto['name']) ? $contacto['name'] : '';  ?>"
         >
     </div>
     <div class="campo">
@@ -14,7 +14,7 @@
             type="text" 
             placeholder="Nombre Empresa" 
             id="empresa"
-            value="<?php echo ($contacto['empresa']) ? $contacto['empresa'] : '';  ?>"
+            value="<?php echo ($contacto['company']) ? $contacto['company'] : '';  ?>"
         >
     </div>
     <div class="campo">
@@ -23,14 +23,14 @@
             type="tel" 
             placeholder="Teléfono Contacto" 
             id="telefono"
-            value="<?php echo ($contacto['telefono']) ? $contacto['telefono'] : '';  ?>"
+            value="<?php echo ($contacto['phone']) ? $contacto['phone'] : '';  ?>"
         >
     </div>
 </div>
 <div class="campo enviar">
     <?php
-        $textoBtn = ($contacto['telefono']) ? 'Guardar' : 'Añadir';
-        $accion = ($contacto['telefono']) ? 'editar' : 'crear';
+        $textoBtn = ($contacto['phone']) ? 'Guardar' : 'Añadir';
+        $accion = ($contacto['phone']) ? 'editar' : 'crear';
     ?>
     <input type="hidden" id="accion" value="<?php echo $accion; ?>">
     <?php if( isset( $contacto['id'] )) { ?>
